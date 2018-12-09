@@ -36,7 +36,7 @@ hero -source="./template"
 Compile SiteGo for Linux on Windows (you may need to close command prompt and reopen it)
 
 ```
-go set GOOS=linux
+setx GOOS linux
 go build -o sitego main.go
 ```
 
@@ -46,13 +46,15 @@ Or on Windows (you may need to set GOOS environment variable back to 'windows'):
 go build -o sitego.exe main.go
 ```
 
+Check your Golang environment variables with *go env*
+
 Usage
 -----
 
 To run the application
 
 ```
-sitego [params]
+sitego[.exe] [params]
 ```
 
 Get all parameters
@@ -96,9 +98,10 @@ Deployments
 -----------
 
 * [Vagrant](vagrant.md)
-* Ansible Playbook for AWS and Azure
-* Terraform scripts for AWS and Azure
+* [Ansible Playbook](ansible.md) for AWS and Azure
+* [Terraform](terraform.md) scripts for AWS and Azure
 * [Docker](docker.md)
+* [Kubernetes](kubernetes.md)
 
 Notes
 -----
