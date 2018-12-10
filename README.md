@@ -3,7 +3,7 @@ Site Go
 
 Simple [Golang](https://golang.org/) website with [Echo Framework](https://echo.labstack.com/) and [Hero templates](https://shiyanhui.github.io/hero) with [Boostrap 4](https://getbootstrap.com/).
 
-The goal is to create a very simple but fully functional [customisable](customise.md) stateless website which can be used to test multiple [deployments](deployments.md), like [Vagrant](vagrant.md) VMs, Ansible Playbooks, Terraform scripts, Docker containers and Kubernetes clusters with minimal overhead and no runtimes.
+The goal is to create a very simple but fully functional [customizable](customize.md) stateless website which can be used to test multiple [deployments](deployments.md), like [Vagrant](vagrant.md) VMs, Ansible Playbooks, Terraform scripts, Docker containers and Kubernetes clusters with minimal overhead and no runtimes.
 
 Features:
 
@@ -11,7 +11,7 @@ Features:
 * Working with as little as only the executable;
 * Configurable with command line parameters and environment variables;
 * Use logging (to console, but can be captured to files);
-* [Custom images and pages](customise.md);
+* [Custom images and pages](customize.md);
 
 Installation
 ------------

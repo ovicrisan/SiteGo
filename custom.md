@@ -1,7 +1,7 @@
 Site Go Customisation
 =====================
 
-By default you can distribute and run only the [executable](https://github.com/ovicrisan/SiteGo/releases), but the application supports out the box customisations for:
+By default you can distribute and run only the [executable](https://github.com/ovicrisan/SiteGo/releases), but the application supports out the box customizations for:
 
 * **Logo and favicon.ico** - need to be in */static* folder (created manually). Logo image is called 'logo.png' (can't change configuration, you'd need to change in the source-code).
 Also, you need to configure *SITE_LOGO = 1* environment variable or use *-i* parameter to show the logo, which by default is not displayed.
