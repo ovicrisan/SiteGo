@@ -3,15 +3,15 @@ Site Go
 
 Simple [Golang](https://golang.org/) website with [Echo Framework](https://echo.labstack.com/) and [Hero templates](https://shiyanhui.github.io/hero) with [Boostrap 4](https://getbootstrap.com/).
 
-The goal is to create a very simple but fully functional [customizable](customize.md) stateless website which can be used to test multiple [deployments](deployments.md), like [Vagrant](vagrant.md) VMs, Ansible Playbooks, Terraform scripts, Docker containers and Kubernetes clusters with minimal overhead and no runtimes.
+The goal is to create a very simple but fully functional [customisable](custom.md) stateless website which can be used to test multiple [deployments](deployments.md), like [Vagrant](docs/vagrant.md) VMs, Ansible Playbooks, Terraform scripts, [Docker containers](docs/docker.md) and Kubernetes clusters with minimal overhead and no runtimes.
 
 Features:
 
-* Static build on multiple platforms (see Release page);
+* Static build on multiple platforms (see [Release](https://github.com/ovicrisan/SiteGo/releases) page);
 * Working with as little as only the executable;
 * Configurable with command line parameters and environment variables;
 * Use logging (to console, but can be captured to files);
-* [Custom images and pages](customize.md);
+* [Custom images and pages](custom.md);
 
 Installation
 ------------
@@ -97,11 +97,11 @@ For instance, if *SITE_LOG = 1* and *sitego -l=0*, the logging is not active.
 Deployments
 -----------
 
-* [Vagrant](vagrant.md)
-* [Ansible Playbook](ansible.md) for AWS and Azure
-* [Terraform](terraform.md) scripts for AWS and Azure
-* [Docker](docker.md)
-* [Kubernetes](kubernetes.md)
+* [Vagrant](docs/vagrant.md) - see [Vagrantfile](https://github.com/ovicrisan/SiteGo/blob/master/deployment/Vagrantfile)
+* [Ansible Playbook](docs/ansible.md) for AWS and Azure
+* [Terraform](docs/terraform.md) scripts for AWS and Azure
+* [Docker](docs/docker.md) - see [Dockerfile](https://github.com/ovicrisan/SiteGo/blob/master/deployment/Dockerfile) or public image at [hub.docker.com/r/ovicrisan/sitego/](https://hub.docker.com/r/ovicrisan/sitego/)
+* [Kubernetes](docs/kubernetes.md)
 
 Notes
 -----
@@ -111,7 +111,12 @@ Notes
 * If you create new environment variables you may need to reboot your computer on Windows; Or you can use *setx SITE_LOGO 1* in command prompt, then close the window and open it again before restarting *sitego.exe*;
 * ASP.NET Core version is also available at [github.com/OviCrisan/SiteNet](https://github.com/ovicrisan/SiteNet);
 
+Screenshot
+----------
+
+![SiteGo](https://github.com/ovicrisan/SiteGo/raw/master/docs/SiteGo.png "SiteGo screenshot")
+
 Versions
 
-* 1.0 - initial release
+* [1.0](https://github.com/ovicrisan/SiteGo/tree/1.0) - initial release
 
