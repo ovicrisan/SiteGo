@@ -40,6 +40,13 @@ setx GOOS linux
 go build -o sitego main.go
 ```
 
+Compile SiteGo for Mac OS on Windows (you may need to close command prompt and reopen it)
+
+```
+setx GOOS darwin
+go build -o sitego main.go
+```
+
 Or on Windows (you may need to set GOOS environment variable back to 'windows'):
 
 ```
@@ -119,4 +126,5 @@ Screenshot
 Versions
 
 * [1.0](https://github.com/ovicrisan/SiteGo/tree/1.0) - initial release
+* 1.1 - show all IP v4 addresses, and recompile with Go lang 1.12
 

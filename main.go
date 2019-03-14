@@ -1,4 +1,4 @@
-// (c) 2018 Ovi Crisan
+// (c) 2018-2019 Ovi Crisan
 // http://ovi.crisan.ca
 // https://github.com/ovicrisan/SiteGo
 
@@ -9,6 +9,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"net"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -24,6 +25,7 @@ var (
 	e     *echo.Echo
 	home  []byte
 	about []byte
+	ips   string
 )
 
 func page(c echo.Context) error {
@@ -54,10 +56,22 @@ func page(c echo.Context) error {
 	return c.HTMLBlob(http.StatusOK, buffer.Bytes())
 }
 
+// get all v4 IP addresses
+func getPrivateIP(host string) string {
+	addrs, _ := net.LookupIP(host)
+	var ret []string
+	for _, addr := range addrs {
+		if ipv4 := addr.To4(); ipv4 != nil {
+			ret = append(ret, ipv4.String())
+		}
+	}
+	return strings.Join(ret, ",")
+}
+
 func main() {
 	var (
-		port string = "8000"
-		log  bool   = false
+		port = "8000"
+		log  = false
 	)
 	// Read envinronment variables
 	if tmp, ok := os.LookupEnv("SITE_NAME"); ok {
@@ -88,12 +102,13 @@ func main() {
 
 	// Show version and exit
 	if f := flag.CommandLine.Lookup("version"); f != nil && f.Value.String() == "true" {
-		fmt.Println("sitego version 1.0")
+		fmt.Println("sitego version 1.1")
 		os.Exit(0)
 	}
 
 	// Get hostname and local path
 	template.Hostname, _ = os.Hostname()
+	template.Hostname += " - " + getPrivateIP(template.Hostname)
 	exe, _ := os.Executable()
 	path := filepath.Dir(exe)
 
