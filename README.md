@@ -105,8 +105,6 @@ Deployments
 -----------
 
 * [Vagrant](docs/vagrant.md) - see [Vagrantfile](https://github.com/ovicrisan/SiteGo/blob/master/deployment/Vagrantfile)
-* [Ansible Playbook](docs/ansible.md) for AWS and Azure
-* [Terraform](docs/terraform.md) scripts for AWS and Azure
 * [Docker](docs/docker.md) - see [Dockerfile](https://github.com/ovicrisan/SiteGo/blob/master/deployment/Dockerfile) or public image at [hub.docker.com/r/ovicrisan/sitego/](https://hub.docker.com/r/ovicrisan/sitego/)
 * [Kubernetes](docs/kubernetes.md)
 
